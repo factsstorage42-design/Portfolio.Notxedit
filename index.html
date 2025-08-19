@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notxedit - Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; background: #f4f7f8; }
+
+    header { 
+      background: #111; 
+      color: #fff; 
+      padding: 2rem; 
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    header h1 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; margin-top: 1rem; letter-spacing: 1px; }
+    header p { font-size: 1.2rem; color: #bbb; }
+
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: none;
+      transition: transform 0.3s;
+    }
+    .logo:hover { transform: scale(1.05); }
+
+    /* Navbar */
+    nav {
+      background: #222;
+      padding: 1rem 0;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      font-size: 1.1rem;
+    }
+
+    .nav-links li a:hover {
+      color: #00c3ff;
+    }
+
+    section { padding: 3rem 2rem; max-width: 1000px; margin: auto; border-radius: 15px; margin-bottom: 30px; }
+    #about { background: linear-gradient(120deg, #f0f4ff, #ffffff); }
+    #showreel { background: linear-gradient(120deg, #fff0f4, #ffffff); }
+    #portfolio { background: linear-gradient(120deg, #fff, #f9f9f9); }
+    #before-after-shorts { background: linear-gradient(120deg, #f9f9f9, #ffffff); }
+
+    /* Headings */
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .highlight { color: #00c3ff; } /* first-word blue highlight */
+    .full-blue { color: #00c3ff; } /* full heading blue */
+
+    .portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .portfolio img, .portfolio iframe { width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: all 0.3s; }
+    .video-container:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 195, 255, 0.6); }
+
+    footer { 
+      background: #111; 
+      color: #bbb; 
+      text-align: center; 
+      padding: 1.5rem; 
+      margin-top: 2rem; 
+      border-top: 2px solid #00c3ff; 
+      text-shadow: 0 0 3px #00c3ff;
+    }
+
+    /* Contact section */
+    .contact-links { text-align: center; margin-top: 1rem; }
+    .contact-links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #00c3ff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .contact-links a:hover { opacity: 0.8; }
+
+    .contact-icon img {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 8px;
+      transition: filter 0.3s, transform 0.3s;
+    }
+    .contact-icon:hover img {
+      filter: drop-shadow(0 0 10px #00c3ff);
+      transform: scale(1.2);
+    }
+
+    .hire-btn {
+      background: linear-gradient(45deg, #00c3ff, #ff4b2b);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    .hire-btn:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,195,255,0.5);
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    p { color: #555; line-height: 1.8; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.ibb.co/Mx9jpBZh/20250819-193117.png" alt="Notxedit Logo" class="logo">
+    <h1>Notxedit</h1>
+    <p>Video Editor | Content Creator</p>
+  </header>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#showreel">ShowReel</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2><span class="highlight">About</span> Me</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      Hi, I’m <b>Notxedit</b>, a passionate video editor with <b>3 years of experience</b> 
+      in creating cinematic edits, reels, and professional content. 
+      I love turning raw footage into engaging stories.
+    </p>
+  </section>
+
+  <section id="showreel">
+    <h2><span class="highlight">ShowReel</span> ✨</h2>
+    <div class="portfolio">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/N__1G4xJ3aw" title="ShowReel Video" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2 class="full-blue">Long Video Edit</h2>
+    <div class="portfolio">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/C8UE3z6Kz7Y" title="Project 1 Video" allowfullscreen></iframe>
+      </div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/4zIMe4B1N0Y" title="Project 2 Video" allowfullscreen></iframe>
+      </div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Ng5xdGotPoU" title="Project 3 Video" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="before-after-shorts">
+    <h2 class="full-blue">Before & After Shorts</h2>
+    <div class="portfolio">
+      <iframe width="315" height="560" src="https://www.youtube.com/embed/mq0U-Qt58Xw" title="Project 1 Short" allowfullscreen></iframe>
+      <iframe width="315" height="560" src="https://www.youtube.com/embed/9LM9dQQRcYI" title="Project 2 Short" allowfullscreen></iframe>
+      <iframe width="315" height="560" src="https://www.youtube.com/embed/yXnFUD7QQIk" title="Project 3 Short" allowfullscreen></iframe>
+      <iframe width="315" height="560" src="https://www.youtube.com/embed/9-uelUt4_eA" title="Project 4 Short" allowfullscreen></iframe>
+      <iframe width="315" height="560" src="https://www.youtube.com/embed/3rnm0P-PxDE" title="Project 5 Short" allowfullscreen></iframe>
+      <iframe width="315" height="560" src="https://www.youtube.com/embed/ITIhY-UAlSI" title="Project 6 Short" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2><span class="highlight">Contact</span></h2>
+    <div class="contact-links">
+      <a href="mailto:abhijeetdhum89@gmail.co" class="contact-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo">
+        Email - abhijeetdhum89@gmail.co
+      </a>
+      <a href="javascript:void(0)" class="contact-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram Logo">
+        Instagram - notxedit.89
+      </a>
+      <a href="https://www.instagram.com/notxedit.89?igsh=NDU5eWduZDRtcXkw" target="_blank" class="hire-btn"><b>Hire Me</b></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Notxedit | All Rights Reserved</p>
+  </footer>
+</body>
+                                                                                                          </html>
